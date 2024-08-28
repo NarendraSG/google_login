@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <script src="https://accounts.google.com/gsi/client" async defer="defer"></script>
+    <div id="g_id_onload" data-client_id="1960357844-nu854v627uudlgqvfliinrtscjhid6mr.apps.googleusercontent.com"
+        data-context="signin" data-ux_mode="popup" data-callback="onSigin" data-nonce="" data-auto_prompt="false"></div>
+    <div class="g_id_signin" data-type="icon" data-shape="square" data-theme="outline" data-text="signin_with"
+        data-size="large"></div>
+    <h1>Google IdToken: </h1>
+    <code id="data"></code>
+
+
+
+    <script>
+        function onSigin(data) {
+            console.log(JSON.stringify(data));
+            document.getElementById("data").innerHTML = data.credential;
+        }
+    </script>
+</body>
+
+</html>
